@@ -1,0 +1,85 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: One Press Blog\n"
+"POT-Creation-Date: 2017-06-08 13:41+0300\n"
+"PO-Revision-Date: 2017-06-08 13:35+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: footer.php:17
+msgid "Footer Primary Menu"
+msgstr ""
+
+#: footer.php:28
+msgid "Footer Social Links Menu"
+msgstr ""
+
+#: footer.php:52
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:52
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: inc/customizer.php:20
+msgid "Change the Additional Options from here as you want"
+msgstr ""
+
+#: inc/customizer.php:22
+msgid "Additional Options"
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "Display Settings"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "Hide post author"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Hide powered link"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "One Press Blog"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/mvandrew/one_press_blog"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"One Press Blog is a Twenty Sixteen child Wordpress theme for quickly "
+"creating a blog or any content site. One Press Blog is a modernized take on "
+"an ever-popular WordPress layout — the horizontal masthead with an optional "
+"right sidebar that works perfectly for blogs and websites. It has custom "
+"color options with beautiful default color schemes, a harmonious fluid grid "
+"using a mobile-first approach, and impeccable polish in every detail. One "
+"Press Blog will make your WordPress look beautiful everywhere."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Andrey Mishchenko"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.msav.ru/"
+msgstr ""

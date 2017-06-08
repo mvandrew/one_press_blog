@@ -4,6 +4,36 @@
 // Parent theme styles customization
 //
 
-.site-footer .site-title:after {
-  content: '';
+.site-footer {
+  .site-title:after {
+    content: '';
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+  .site-main > article {
+    margin-bottom: 4.0em;
+  }
+
+  body:not(.search-results) {
+    article:not(.type-page) {
+      .entry-content,
+      .entry-footer {
+        float: none;
+        width: 100%;
+      } // .entry-content
+      .entry-footer {
+        margin-top: 1.75em;
+        overflow: hidden;
+
+        & > span {
+          display: block;
+          float: left;
+          margin-right: 1.75em;
+        }
+      } // .entry-footer
+    }
+  } // body:not(.search-results)
+
 }

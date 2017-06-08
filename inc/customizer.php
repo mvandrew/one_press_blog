@@ -164,5 +164,11 @@ if ( !function_exists('onepressblog_customize_register') ) {
 			'settings'              => 'onepressblog_copyright_year'
 		));
 
+
+		//
+		// Counters IDs
+		//
+		OnePressBlog_Counters::customize_register( $wp_customize );
+
 	} // onepressblog_customize_register
 }

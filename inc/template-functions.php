@@ -41,6 +41,35 @@ if ( !function_exists('onepressblog_credits') ) {
 	function onepressblog_credits() {
 
 		//
+		// Copyright Info
+		//
+		if ( get_theme_mod('onepressblog_show_copyright', 0) ) {
+			$copyright_owner        = get_theme_mod( 'onepressblog_copyright_owner', get_bloginfo( 'name' ) );
+			$copyright_owner        = mb_strlen($copyright_owner) > 0 ? $copyright_owner : get_bloginfo( 'name' );
+			$cur_date               = new DateTime();
+			$cur_year               = $cur_date->format('Y');
+			$first_year             = get_theme_mod( 'onepressblog_copyright_year', $cur_year );
+			$first_year             = mb_strlen($first_year) == 4 ? $first_year : $cur_year;
+
+			if ( $cur_year == $first_year ) {
+				printf( '<div class="credits_info designed_site">' .
+				        __('&copy; %s &mdash; %s, All Rights Reserved.', 'onepressblog') .
+				        '</div>',
+					$cur_year,
+					$copyright_owner);
+			} else {
+				printf( '<div class="credits_info designed_site">' .
+				        __('&copy; %s-%s &mdash; %s, All Rights Reserved.', 'onepressblog') .
+				        '</div>',
+					$first_year,
+					$cur_year,
+					$copyright_owner);
+			}
+
+		}
+
+
+		//
 		// Design Site Links
 		//
 		if ( get_theme_mod('onepressblog_show_design_site_link', false) ) {

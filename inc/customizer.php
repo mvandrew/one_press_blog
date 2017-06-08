@@ -117,5 +117,52 @@ if ( !function_exists('onepressblog_customize_register') ) {
 			'settings'              => 'onepressblog_design_site_alias'
 		));
 
+
+		//
+		// Copyright Info
+		//
+		$wp_customize->add_section( 'onepressblog_copyright_settings', array(
+			'priority'              => 3,
+			'title'                 => __( 'Copyright Info', 'onepressblog' ),
+			'panel'                 => 'onepressblog_additional_options'
+		));
+
+		// Show Copyright Info
+		$wp_customize->add_setting( 'onepressblog_show_copyright', array(
+			'default'               => 0,
+			'capability'            => 'edit_theme_options',
+			'sanitize_callback'     => 'onepressblog_checkbox_sanitize'
+		));
+		$wp_customize->add_control( 'onepressblog_show_copyright', array(
+			'type'                  => 'checkbox',
+			'label'                 => __('Show Copyright Info', 'onepressblog'),
+			'section'               => 'onepressblog_copyright_settings',
+			'settings'              => 'onepressblog_show_copyright'
+		));
+
+		// Copyright Owner
+		$wp_customize->add_setting( 'onepressblog_copyright_owner', array(
+			'default'               => '',
+			'capability'            => 'edit_theme_options'
+		));
+		$wp_customize->add_control( 'onepressblog_copyright_owner', array(
+			'type'                  => 'text',
+			'label'                 => __('Copyright Owner', 'onepressblog'),
+			'section'               => 'onepressblog_copyright_settings',
+			'settings'              => 'onepressblog_copyright_owner'
+		));
+
+		// First Copyright Year
+		$wp_customize->add_setting( 'onepressblog_copyright_year', array(
+			'default'               => '',
+			'capability'            => 'edit_theme_options'
+		));
+		$wp_customize->add_control( 'onepressblog_copyright_year', array(
+			'type'                  => 'number',
+			'label'                 => __('First Copyright Year', 'onepressblog'),
+			'section'               => 'onepressblog_copyright_settings',
+			'settings'              => 'onepressblog_copyright_year'
+		));
+
 	} // onepressblog_customize_register
 }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: One Press Blog\n"
-"POT-Creation-Date: 2017-06-08 13:41+0300\n"
-"PO-Revision-Date: 2017-06-08 13:42+0300\n"
+"POT-Creation-Date: 2017-06-08 17:52+0300\n"
+"PO-Revision-Date: 2017-06-08 17:57+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -46,17 +46,100 @@ msgstr "Управляйте дополнительными параметрам
 msgid "Additional Options"
 msgstr "Дополнительные параметры"
 
-#: inc/customizer.php:27
+#: inc/customizer.php:31
 msgid "Display Settings"
 msgstr "Параметры отображения"
 
-#: inc/customizer.php:39
+#: inc/customizer.php:43
 msgid "Hide post author"
 msgstr "Скрывать автора постов"
 
-#: inc/customizer.php:52
+#: inc/customizer.php:56
 msgid "Hide powered link"
 msgstr "Скрыть ссылку на Wordpress"
+
+#: inc/customizer.php:67
+msgid "Design Site Link"
+msgstr "Разработчик Сайта"
+
+#: inc/customizer.php:79
+msgid "Show design site link"
+msgstr "Показывать ссылку разработчика сайта"
+
+#: inc/customizer.php:91
+msgid "Design site link text"
+msgstr "Текст ссылки"
+
+#: inc/customizer.php:103
+msgid "Design site link URL"
+msgstr "Ссылка на сайт разработчика"
+
+#: inc/customizer.php:115
+msgid "Design site link alias"
+msgstr "Псевдоним ссылки для показа"
+
+#: inc/customizer.php:126
+msgid "Copyright Info"
+msgstr "Авторские права"
+
+#: inc/customizer.php:138
+msgid "Show Copyright Info"
+msgstr "Показать информацию об авторских правах"
+
+#: inc/customizer.php:150
+msgid "Copyright Owner"
+msgstr "Владелец прав"
+
+#: inc/customizer.php:162
+msgid "First Copyright Year"
+msgstr "Год возникновения прав"
+
+#: inc/template-functions.php:56
+#, php-format
+msgid "&copy; %s &mdash; %s, All Rights Reserved."
+msgstr "&copy; %s &mdash; %s, Защищено авторским правом."
+
+#: inc/template-functions.php:62
+#, php-format
+msgid "&copy; %s-%s &mdash; %s, All Rights Reserved."
+msgstr "&copy; %s-%s &mdash; %s, Защищено авторским правом."
+
+#: inc/template-tags.php:14
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr ""
+
+#: inc/template-tags.php:27
+msgctxt "Used before post format."
+msgid "Format"
+msgstr ""
+
+#: inc/template-tags.php:39
+#, php-format
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: template-parts/content-single.php:25 template-parts/content.php:33
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-single.php:29 template-parts/content.php:37
+msgid "Page"
+msgstr ""
+
+#: template-parts/content-single.php:45 template-parts/content.php:49
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content.php:14
+msgid "Featured"
+msgstr ""
+
+#: template-parts/content.php:28
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "One Press Blog"

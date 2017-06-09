@@ -3929,6 +3929,43 @@ p > video {
     margin-right: 1.75em;
   }
 }
+.site-top-banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 1.2em;
+}
+.site-top-banner > .site-top-banner-in {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.site-top-banner .site-branding .site-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #ffffff;
+}
+.site-top-banner .site-branding .site-title a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.site-top-banner .site-branding .site-title a:hover, .site-top-banner .site-branding .site-title a:focus {
+  text-decoration: underline;
+  color: whitesmoke;
+}
+.site-top-banner .site-branding .site-description {
+  color: #bfbfbf;
+}
+.site-top-banner .main-navigation a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.site-top-banner .main-navigation a:hover, .site-top-banner .main-navigation a:focus {
+  text-decoration: underline;
+  color: whitesmoke;
+}
+
 footer.site-footer .credits_info {
   display: block;
   margin-bottom: 0.75em;

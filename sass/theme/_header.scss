@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import "compass/css3";
+
+.site-top-banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include background-size(cover);
+  margin-bottom: 1.2em;
+
+  > .site-top-banner-in {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .site-branding {
+    .site-title {
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #ffffff;
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: $gray-lighter;
+        }
+      }
+    } // .site-title
+    .site-description {
+      color: $gray-light;
+    } // .site-description
+  } // .site-branding
+
+  .main-navigation {
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        color: $gray-lighter;
+      }
+    }
+  } // .main-navigation
+}

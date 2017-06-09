@@ -1,3 +1,8 @@
+@charset "UTF-8";
+
+@import "compass/css3";
+@import "compass/css3/appearance";
+
 /**
  * Table of Contents
  *
@@ -32,14 +37,17 @@
  *    14.5 - >= 1200px
  * 15.0 - Print
  */
+
+
 /**
  * 1.0 - Normalize
  *
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
+
 html {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -127,9 +135,7 @@ figure {
 }
 
 hr {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  @include box-sizing(content-box);
 }
 
 code,
@@ -168,8 +174,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -moz-appearance: button;
-  -webkit-appearance: button;
+  @include appearance(button);
   cursor: pointer;
 }
 
@@ -187,9 +192,7 @@ input::-moz-focus-inner {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   margin-right: 0.4375em;
   padding: 0;
 }
@@ -210,20 +213,19 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="search"] {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
+  @include appearance(textfield);
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  @include appearance(none);
 }
 
 fieldset {
+  // border: 1px solid #d1d1d1;
   border-width: 1px;
   border-style: solid;
-  border-color: #bfbfbf;
+  border-color: $gray-light;
   margin: 0 0 1.75em;
   min-width: inherit;
   padding: 0.875em;
@@ -247,9 +249,11 @@ optgroup {
   font-weight: bold;
 }
 
+
 /**
  * 2.0 - Genericons
  */
+
 .menu-item-has-children a:after,
 .social-navigation a:before,
 .dropdown-toggle:after,
@@ -276,16 +280,18 @@ optgroup {
   vertical-align: top;
 }
 
+
 /**
  * 3.0 - Typography
  */
+
 body,
 button,
 input,
 select,
 textarea {
-  color: #222222;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $body_text;
+  font-family: $font-family-default;
   font-size: 16px;
   line-height: 1.75;
 }
@@ -316,9 +322,9 @@ i {
 blockquote {
   border-width: 0;
   border-style: solid;
-  border-color: #2e6da4;
+  border-color: darken($brand-primary, 5%);
   border-left-width: 4px;
-  color: #555555;
+  color: $gray;
   font-size: 19px;
   font-style: italic;
   line-height: 1.45;
@@ -421,9 +427,11 @@ big {
   font-size: 125%;
 }
 
+
 /**
  * 4.0 - Elements
  */
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -434,9 +442,7 @@ html {
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  -moz-box-sizing: inherit;
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  @include box-sizing(inherit);
 }
 
 body {
@@ -535,29 +541,31 @@ td {
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
 }
 
 :-moz-placeholder {
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
 }
 
 ::-moz-placeholder {
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   opacity: 1;
   /* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
 }
+
 
 /**
  * 5.0 - Forms
  */
+
 input {
   line-height: normal;
 }
@@ -578,7 +586,7 @@ input[type="submit"][disabled]:focus {
   border: 0;
   border-radius: 2px;
   color: #fff;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-weight: 700;
   letter-spacing: 0.046875em;
   line-height: 1;
@@ -653,7 +661,7 @@ textarea:focus {
 .post-password-form label {
   color: #686868;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   letter-spacing: 0.076923077em;
@@ -700,12 +708,15 @@ input[type="search"].search-field {
   width: 42px;
 }
 
+
 /**
  * 6.0 - Navigation
  */
+
 /**
  * 6.1 - Links
  */
+
 a {
   color: #007acc;
   text-decoration: none;
@@ -755,9 +766,11 @@ a:active {
   box-shadow: none;
 }
 
+
 /**
  * 6.2 - Menus
  */
+
 .site-header-menu {
   display: none;
   -webkit-flex: 0 1 100%;
@@ -772,7 +785,7 @@ a:active {
 }
 
 .main-navigation {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
 }
 
 .site-footer .main-navigation {
@@ -1026,7 +1039,7 @@ a:active {
   border-top: 4px solid #1a1a1a;
   border-bottom: 4px solid #1a1a1a;
   clear: both;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   margin: 0 7.6923% 3.5em;
 }
 
@@ -1052,7 +1065,7 @@ a:active {
 
 .post-navigation .post-title {
   display: inline;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 23px;
   font-size: 1.4375rem;
   font-weight: 700;
@@ -1071,7 +1084,7 @@ a:active {
 
 .pagination {
   border-top: 4px solid #1a1a1a;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 19px;
   font-size: 1.1875rem;
   margin: 0 7.6923% 2.947368421em;
@@ -1085,7 +1098,7 @@ a:active {
   content: "";
   height: 52px;
   position: absolute;
-  top: 0;
+  top:0;
   width: 52px;
   z-index: 0;
 }
@@ -1210,7 +1223,7 @@ a:active {
   border-top: 1px solid #d1d1d1;
   border-bottom: 1px solid #d1d1d1;
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.6153846154;
@@ -1243,9 +1256,11 @@ a:active {
   padding: 0 0.538461538em;
 }
 
+
 /**
  * 7.0 - Accessibility
  */
+
 /* Text meant only for screen readers */
 .says,
 .screen-reader-text {
@@ -1264,7 +1279,7 @@ a:active {
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
   color: #21759b;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 14px;
   font-weight: 700;
   left: -9999em;
@@ -1277,7 +1292,7 @@ a:active {
 
 .logged-in .site .skip-link {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
 }
 
 .site .skip-link:focus {
@@ -1289,9 +1304,11 @@ a:active {
   z-index: 100000;
 }
 
+
 /**
  * 8.0 - Alignments
  */
+
 .alignleft {
   float: left;
   margin: 0.375em 1.75em 1.75em 0;
@@ -1320,9 +1337,11 @@ blockquote.aligncenter {
   margin-bottom: 1.473684211em;
 }
 
+
 /**
  * 9.0 - Clearings
  */
+
 .clear:before,
 .clear:after,
 blockquote:before,
@@ -1363,9 +1382,11 @@ blockquote:after,
   clear: both;
 }
 
+
 /**
  * 10.0 - Widgets
  */
+
 .widget {
   border-top: 4px solid #1a1a1a;
   margin-bottom: 3.5em;
@@ -1378,7 +1399,7 @@ blockquote:after,
 }
 
 .widget .widget-title {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 16px;
   font-size: 1rem;
   letter-spacing: 0.046875em;
@@ -1429,7 +1450,7 @@ blockquote:after,
 .widget_recent_entries .post-date {
   color: #686868;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.615384615;
@@ -1449,7 +1470,7 @@ blockquote:after,
 .widget_rss cite {
   color: #686868;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   font-style: normal;
@@ -1470,7 +1491,7 @@ blockquote:after,
   border: 1px solid #d1d1d1;
   border-radius: 2px;
   display: inline-block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   line-height: 1;
   margin: 0 0.1875em 0.4375em 0;
   padding: 0.5625em 0.4375em 0.5em;
@@ -1483,9 +1504,11 @@ blockquote:after,
   outline: 0;
 }
 
+
 /**
  * 11.0 - Content
  */
+
 .site {
   background-color: #fff;
 }
@@ -1513,9 +1536,11 @@ blockquote:after,
   margin-bottom: 0;
 }
 
+
 /**
  * 11.1 - Header
  */
+
 .site-header {
   padding: 2.625em 7.6923%;
 }
@@ -1549,7 +1574,7 @@ blockquote:after,
 }
 
 .site-title {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 23px;
   font-size: 1.4375rem;
   font-weight: 700;
@@ -1634,6 +1659,7 @@ blockquote:after,
 /**
  * 11.2 - Posts and pages
  */
+
 .site-main > article {
   margin-bottom: 3.5em;
   position: relative;
@@ -1649,7 +1675,7 @@ blockquote:after,
 }
 
 .entry-title {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 28px;
   font-size: 1.75rem;
   font-weight: 700;
@@ -1934,7 +1960,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .entry-footer {
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.6153846154;
@@ -1970,7 +1996,7 @@ body:not(.search-results) .entry-summary > :last-child,
 .sticky-post {
   color: #686868;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   letter-spacing: 0.076923077em;
@@ -2010,7 +2036,7 @@ body.search-no-results .page-header {
 }
 
 .page-title {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 23px;
   font-size: 1.4375rem;
   line-height: 1.2173913043;
@@ -2033,7 +2059,7 @@ body.search-no-results .page-header {
 
 .page-links {
   clear: both;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   margin: 0 0 1.75em;
 }
 
@@ -2098,9 +2124,11 @@ body.search-no-results .page-header {
   margin-bottom: 3.5em;
 }
 
+
 /**
  * 11.3 - Post Formats
  */
+
 .format-aside .entry-title,
 .format-image .entry-title,
 .format-video .entry-title,
@@ -2121,9 +2149,11 @@ body.search-no-results .page-header {
   display: none;
 }
 
+
 /**
  * 11.4 - Comments
  */
+
 .comments-area {
   margin: 0 7.6923% 3.5em;
 }
@@ -2136,7 +2166,7 @@ body.search-no-results .page-header {
 .comments-title,
 .comment-reply-title {
   border-top: 4px solid #1a1a1a;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 23px;
   font-size: 1.4375rem;
   font-weight: 700;
@@ -2192,7 +2222,7 @@ body.search-no-results .page-header {
 .comment-metadata,
 .pingback .edit-link {
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.6153846154;
@@ -2242,7 +2272,7 @@ body.search-no-results .page-header {
   border-radius: 2px;
   color: #007acc;
   display: inline-block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1;
@@ -2264,7 +2294,7 @@ body.search-no-results .page-header {
 .comment-form label {
   color: #686868;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   letter-spacing: 0.076923077em;
@@ -2290,7 +2320,7 @@ body.search-no-results .page-header {
 
 .no-comments {
   border-top: 1px solid #d1d1d1;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-weight: 700;
   margin: 0;
   padding-top: 1.75em;
@@ -2302,7 +2332,7 @@ body.search-no-results .page-header {
 }
 
 .form-allowed-tags code {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
 }
 
 .form-submit {
@@ -2311,7 +2341,7 @@ body.search-no-results .page-header {
 
 .required {
   color: #007acc;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
 }
 
 .comment-reply-title small {
@@ -2338,17 +2368,21 @@ body.search-no-results .page-header {
   top: -5px;
 }
 
+
 /**
  * 11.5 - Sidebar
  */
+
 .sidebar {
   margin-bottom: 3.5em;
   padding: 0 7.6923%;
 }
 
+
 /**
  * 11.6 - Footer
  */
+
 .site-footer {
   padding: 0 7.6923% 1.75em;
 }
@@ -2378,14 +2412,16 @@ body.search-no-results .page-header {
 .site-footer .site-title:after {
   content: "\002f";
   display: inline-block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   opacity: 0.7;
   padding: 0 0.307692308em 0 0.538461538em;
 }
 
+
 /**
  * 12.0 - Media
  */
+
 .site .avatar {
   border-radius: 50%;
 }
@@ -2453,9 +2489,11 @@ p > video {
   top: 0.7142857143em;
 }
 
+
 /**
  * 12.1 - Captions
  */
+
 .wp-caption {
   margin-bottom: 1.75em;
   max-width: 100%;
@@ -2475,9 +2513,11 @@ p > video {
   padding-top: 0.5384615385em;
 }
 
+
 /**
  * 12.2 - Galleries
  */
+
 .gallery {
   margin: 0 -1.1666667% 1.75em;
 }
@@ -2544,9 +2584,11 @@ p > video {
   display: none;
 }
 
+
 /**
  * 13.0 - Multisites
  */
+
 .widecolumn {
   margin-bottom: 3.5em;
   padding: 0 7.6923%;
@@ -2588,7 +2630,7 @@ p > video {
 .widecolumn label,
 .widecolumn .mu_register label {
   color: #686868;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font-family-default;
   font-size: 13px;
   font-size: 0.8125rem;
   font-weight: 400;
@@ -2643,9 +2685,11 @@ p > video {
   margin-bottom: 0;
 }
 
+
 /**
  * 14.0 - Media Queries
  */
+
 /**
  * Does the same thing as <meta name="viewport" content="width=device-width">,
  * but in the future W3C standard way. -ms- prefix is required for IE10+ to
@@ -2655,12 +2699,16 @@ p > video {
 @-ms-viewport {
   width: device-width;
 }
+
 @viewport {
   width: device-width;
 }
+
+
 /**
  * 14.1 - >= 710px
  */
+
 @media screen and (min-width: 44.375em) {
   body:not(.custom-background-image):before,
   body:not(.custom-background-image):after {
@@ -2741,7 +2789,7 @@ p > video {
   }
 
   .pagination {
-    margin: 0 23.0769% 4.42105em 7.6923%;
+    margin: 0 23.0769% 4.421052632em 7.6923%
   }
 
   .post-navigation {
@@ -2877,17 +2925,23 @@ p > video {
     margin-left: 1.473684211em;
   }
 }
+
+
 /**
  * 14.2 - >= 783px
  */
+
 @media screen and (min-width: 48.9375em) {
   body:not(.custom-background-image).admin-bar:before {
     top: 32px;
   }
 }
+
+
 /**
  * 14.3 - >= 910px
  */
+
 @media screen and (min-width: 56.875em) {
   .site-header {
     padding-right: 4.5455%;
@@ -3319,9 +3373,12 @@ p > video {
     padding-left: 15%;
   }
 }
+
+
 /**
  * 14.4 - >= 985px
  */
+
 @media screen and (min-width: 61.5625em) {
   .site-main {
     margin-bottom: 7.0em;
@@ -3541,9 +3598,12 @@ p > video {
     width: 15%;
   }
 }
+
+
 /**
  * 14.5 - >= 1200px
  */
+
 @media screen and (min-width: 75em) {
   body:not(.search-results) .entry-summary {
     font-size: 23px;
@@ -3661,9 +3721,12 @@ p > video {
     margin-bottom: 1.5217391304em;
   }
 }
+
+
 /**
  * 15.0 - Print
  */
+
 @media print {
   form,
   button,
@@ -3771,8 +3834,7 @@ p > video {
 
   body,
   .site {
-    background: none !important;
-    /* Brute force since user agents all print differently. */
+    background: none !important; /* Brute force since user agents all print differently. */
   }
 
   body,
@@ -3781,15 +3843,13 @@ p > video {
   .site-branding .site-title a,
   .entry-title a,
   .comment-author {
-    color: #1a1a1a !important;
-    /* Make sure color schemes don't affect to print */
+    color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
   }
 
   blockquote,
   .page-header,
   .comments-title {
-    border-color: #1a1a1a !important;
-    /* Make sure color schemes don't affect to print */
+    border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
   }
 
   blockquote,
@@ -3810,14 +3870,12 @@ p > video {
   .site-info a,
   .wp-caption .wp-caption-text,
   .gallery-caption {
-    color: #686868 !important;
-    /* Make sure color schemes don't affect to print */
+    color: #686868 !important; /* Make sure color schemes don't affect to print */
   }
 
   code,
   hr {
-    background-color: #d1d1d1 !important;
-    /* Make sure color schemes don't affect to print */
+    background-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
   }
 
   pre,
@@ -3831,13 +3889,11 @@ p > video {
   .comment-list .pingback,
   .comment-list .trackback,
   .no-comments {
-    border-color: #d1d1d1 !important;
-    /* Make sure color schemes don't affect to print */
+    border-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
   }
 
   a {
-    color: #007acc !important;
-    /* Make sure color schemes don't affect to print */
+    color: #007acc !important; /* Make sure color schemes don't affect to print */
   }
 
   .entry-content a,
@@ -3846,8 +3902,7 @@ p > video {
   .comment-content a,
   .pingback .comment-body > a {
     box-shadow: none;
-    border-bottom: 1px solid #007acc !important;
-    /* Make sure color schemes don't affect to print */
+    border-bottom: 1px solid #007acc !important; /* Make sure color schemes don't affect to print */
   }
 
   .site {
@@ -3904,32 +3959,4 @@ p > video {
   .widecolumn {
     padding: 0;
   }
-}
-.site-footer .site-title:after {
-  content: '';
-}
-
-@media screen and (min-width: 61.5625em) {
-  .site-main > article {
-    margin-bottom: 4.0em;
-  }
-
-  body:not(.search-results) article:not(.type-page) .entry-content,
-  body:not(.search-results) article:not(.type-page) .entry-footer {
-    float: none;
-    width: 100%;
-  }
-  body:not(.search-results) article:not(.type-page) .entry-footer {
-    margin-top: 1.75em;
-    overflow: hidden;
-  }
-  body:not(.search-results) article:not(.type-page) .entry-footer > span {
-    display: block;
-    float: left;
-    margin-right: 1.75em;
-  }
-}
-footer.site-footer .credits_info {
-  display: block;
-  margin-bottom: 0.75em;
 }

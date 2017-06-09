@@ -96,3 +96,35 @@ if ( !function_exists('onepressblog_credits') ) {
 		// onepressblog_credits
 	}
 }
+
+
+if ( !function_exists('onepressblog_after_body') ) {
+	/**
+	 * Displays information after the BODY tag.
+	 *
+	 * @return void
+	 */
+	function onepressblog_after_body() {
+
+		OnePressBlog_Counters::get_instance()->yandex_metrika_code();
+		OnePressBlog_Counters::get_instance()->google_analytics_code();
+
+		// onepressblog_after_body
+	}
+}
+
+
+if ( !function_exists('onepressblog_head') ) {
+	/**
+	 * Displays additional info in the HEAD tag
+	 *
+	 * @return void
+	 */
+	function onepressblog_head() {
+
+		OnePressBlog_Counters::get_instance()->yandex_webmaster_code();
+		OnePressBlog_Counters::get_instance()->google_webmaster_code();
+
+		// onepressblog_head
+	}
+}

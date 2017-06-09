@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: One Press Blog\n"
-"POT-Creation-Date: 2017-06-08 17:52+0300\n"
-"PO-Revision-Date: 2017-06-08 17:57+0300\n"
+"POT-Creation-Date: 2017-06-09 17:13+0300\n"
+"PO-Revision-Date: 2017-06-09 17:15+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -37,6 +37,42 @@ msgstr ""
 #, php-format
 msgid "Proudly powered by %s"
 msgstr "Работает на %s"
+
+#: header.php:34
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:54
+msgid "Menu"
+msgstr ""
+
+#: header.php:58
+msgid "Primary Menu"
+msgstr ""
+
+#: header.php:69
+msgid "Social Links Menu"
+msgstr ""
+
+#: inc/classes/class_counters.php:108
+msgid "Counters IDs"
+msgstr "Счётчики Аналитики"
+
+#: inc/classes/class_counters.php:120
+msgid "Yandex Metrika ID"
+msgstr "Яндекс Метрика Идентификатор"
+
+#: inc/classes/class_counters.php:133
+msgid "Yandex Webmaster ID"
+msgstr "Яндекс Вебмастер Идентификатор"
+
+#: inc/classes/class_counters.php:146
+msgid "Google Analytics ID"
+msgstr "Google Analytics Идентификатор"
+
+#: inc/classes/class_counters.php:159
+msgid "Google Webmaster ID"
+msgstr "Google Webmaster Идентификатор"
 
 #: inc/customizer.php:20
 msgid "Change the Additional Options from here as you want"

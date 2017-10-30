@@ -49,7 +49,7 @@
 	  ?>
     <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 	  <?php if ( !get_theme_mod('onepressblog_hide_powered_link', false) ): ?>
-        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'onepressblog' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'onepressblog' ), 'WordPress' ); ?></a>
+        <a href="<?php echo esc_url( __( 'http://www.msav.ru/', 'onepressblog' ) ); ?>"><?php _e( 'Designed by', 'onepressblog' ); ?></a>&nbsp;msav.ru
 	  <?php endif; ?>
   </div><!-- .site-info -->
 </footer><!-- .site-footer -->

@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-@import "compass/css3";
-
-
 .site-title {
   font-weight: 300;
   text-transform: uppercase;
@@ -12,7 +9,8 @@
 .site-top-banner {
   background-repeat: no-repeat;
   background-position: center center;
-  @include background-size(cover);
+  -webkit-background-size: cover;
+  background-size: cover;
   margin-bottom: 1.2em;
 
   > .site-top-banner-in {

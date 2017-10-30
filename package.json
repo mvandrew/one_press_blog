@@ -1,0 +1,42 @@
+{
+  "name": "one_press_blog",
+  "version": "1.1.0",
+  "description": "One Press Blog is a Twenty Sixteen child Wordpress theme for quickly creating a blog or some content site.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvandrew/one_press_blog.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "template",
+    "wordpress-theme",
+    "wordpress-template",
+    "php",
+    "css",
+    "sass",
+    "javascript"
+  ],
+  "author": "Andrey Mishchenko",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mvandrew/one_press_blog/issues"
+  },
+  "homepage": "https://github.com/mvandrew/one_press_blog#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-strip-css-comments": "^1.2.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "one_press_blog",
+  "description": "One Press Blog is a Twenty Sixteen child Wordpress theme for quickly creating a blog or some content site.",
+  "main": "",
+  "authors": [
+    "Andrey Mishchenko"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "wordpress",
+    "theme",
+    "template",
+    "wordpress-theme",
+    "wordpress-template",
+    "php",
+    "css",
+    "sass",
+    "javascript"
+  ],
+  "homepage": "https://github.com/mvandrew/one_press_blog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./src/vendor",
+    "test",
+    "tests"
+  ]
+}

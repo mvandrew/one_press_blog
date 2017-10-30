@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: One Press Blog\n"
-"POT-Creation-Date: 2017-06-09 17:13+0300\n"
-"PO-Revision-Date: 2017-06-09 17:15+0300\n"
+"POT-Creation-Date: 2017-10-30 15:49+0300\n"
+"PO-Revision-Date: 2017-10-30 15:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -29,30 +29,30 @@ msgstr "Основное меню в подвале"
 msgid "Footer Social Links Menu"
 msgstr "Социальное меню в подвале"
 
+#. Author URI of the plugin/theme
 #: footer.php:52
-msgid "https://wordpress.org/"
+msgid "http://www.msav.ru/"
 msgstr ""
 
 #: footer.php:52
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Работает на %s"
+msgid "Designed by"
+msgstr "Создание сайта"
 
-#: header.php:34
+#: header.php:38
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:54
-msgid "Menu"
-msgstr ""
-
 #: header.php:58
-msgid "Primary Menu"
-msgstr ""
+msgid "Menu"
+msgstr "Меню"
 
-#: header.php:69
+#: header.php:62
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: header.php:73
 msgid "Social Links Menu"
-msgstr ""
+msgstr "Социальные сети"
 
 #: inc/classes/class_counters.php:108
 msgid "Counters IDs"
@@ -157,25 +157,25 @@ msgstr ""
 
 #: template-parts/content-single.php:25 template-parts/content.php:33
 msgid "Pages:"
-msgstr ""
+msgstr "Страницы:"
 
 #: template-parts/content-single.php:29 template-parts/content.php:37
 msgid "Page"
-msgstr ""
+msgstr "Страница"
 
 #: template-parts/content-single.php:45 template-parts/content.php:49
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Редактировать<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content.php:14
 msgid "Featured"
-msgstr ""
+msgstr "Рекомендуем"
 
 #: template-parts/content.php:28
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Подробнее<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #. Theme Name of the plugin/theme
 msgid "One Press Blog"
@@ -188,7 +188,7 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "One Press Blog is a Twenty Sixteen child Wordpress theme for quickly "
-"creating a blog or any content site. One Press Blog is a modernized take on "
+"creating a blog or some content site. One Press Blog is a modernized take on "
 "an ever-popular WordPress layout — the horizontal masthead with an optional "
 "right sidebar that works perfectly for blogs and websites. It has custom "
 "color options with beautiful default color schemes, a harmonious fluid grid "
@@ -200,6 +200,5 @@ msgstr ""
 msgid "Andrey Mishchenko"
 msgstr "Андрей Мищенко"
 
-#. Author URI of the plugin/theme
-msgid "http://www.msav.ru/"
-msgstr ""
+#~ msgid "Proudly powered by %s"
+#~ msgstr "Работает на %s"

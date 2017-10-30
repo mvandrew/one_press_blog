@@ -22,6 +22,9 @@ var dirs = {
 };
 
 
+/**
+ * Make the parent theme style file.
+ */
 gulp.task( 'compass', function () {
 
     return gulp.src( dirs.src + '/compass/**/*.scss' )
@@ -41,6 +44,9 @@ gulp.task( 'compass', function () {
 });
 
 
+/**
+ * Make the main theme style file.
+ */
 gulp.task( 'sass', function () {
 
     return gulp.src([
@@ -60,6 +66,9 @@ gulp.task( 'sass', function () {
 });
 
 
+/**
+ * Compile theme styles.
+ */
 gulp.task( 'style', ['compass', 'sass'], function () {
 
     return gulp.src([
@@ -78,5 +87,29 @@ gulp.task( 'style', ['compass', 'sass'], function () {
         .pipe( concat('style.css') )
         .pipe( gulp.dest(dirs.dist + '/stylesheets') )
         .pipe( notify({ message: 'Theme Styles task completed', onLast: true }) );
+
+});
+
+
+/**
+ * Make the editor style file.
+ */
+gulp.task( 'editor-style', function () {
+
+    return gulp.src([
+        dirs.src + '/sass/editor-style.scss'
+    ])
+        .pipe( plumber({ errorHandler: function(err) {
+            notify.onError({
+                title: "Gulp error in " + err.plugin,
+                message:  err.toString()
+            })(err);
+        }}) )
+        .pipe( sass() )
+        .pipe( autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }) )
+        .pipe( gcmq() )
+        .pipe( stripCssComments({preserve: false}) )
+        .pipe( cssnano() )
+        .pipe( gulp.dest(dirs.dist + '/stylesheets') );
 
 });
